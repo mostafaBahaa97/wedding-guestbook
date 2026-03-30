@@ -1,11 +1,16 @@
 'use client'
-import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export default function ThankYou() {
-  const searchParams = useSearchParams()
-  const name = searchParams.get('name')
+  const [name, setName] = useState('')
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const queryName = params.get('name')
+    if (queryName) setName(queryName)
+  }, [])
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-pink-50 flex flex-col items-center justify-center p-4 text-center dir-rtl relative overflow-hidden">
