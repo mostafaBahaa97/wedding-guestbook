@@ -344,6 +344,47 @@ export default function Home() {
           .card { padding: 2rem 1.5rem 1.5rem; }
           .names-heading { font-size: 2.1rem; }
         }
+
+        .site-footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          padding: 0.9rem 1rem 1.1rem;
+          background: linear-gradient(to top, rgba(250,246,240,0.9) 45%, transparent);
+          pointer-events: none;
+        }
+
+        .site-footer-text {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 0.85rem;
+          letter-spacing: 0.06em;
+          color: var(--muted);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          pointer-events: auto;
+        }
+
+        .site-footer-heart {
+          color: var(--rose);
+          font-size: 0.75rem;
+        }
+
+        .site-footer-link {
+          color: var(--gold-dark);
+          text-decoration: none;
+          font-weight: 600;
+          border-bottom: 1px solid var(--gold-light);
+          padding-bottom: 1px;
+          transition: color 0.2s, border-color 0.2s;
+        }
+
+        .site-footer-link:hover {
+          color: var(--gold);
+          border-color: var(--gold);
+        }
       `}</style>
 
       <div className="page-bg">
@@ -487,15 +528,22 @@ export default function Home() {
             </motion.div>
           </form>
         </motion.div>
-         <div className="fixed bottom-4 left-0 right-0 text-center">
-          <p className={`text-sm text-gray-500 opacity-70`}>
-            Made with 🤍 by <a href="https://mostafa-s-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+
+        <div className="site-footer">
+          <p className="site-footer-text">
+            Made with <span className="site-footer-heart">♥</span> by{' '}
+            <a
+              href="https://mostafa-s-portfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="site-footer-link"
+            >
               Mostafa Bahaa
             </a>
           </p>
         </div>
       </div>
-     
+
     </>
   )
 }
