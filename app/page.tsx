@@ -11,17 +11,23 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
-    const { error } = await supabase.from('memories').insert([{ name: name || 'ضيف مجهول', message }])
-    if (error) {
-      alert('حدث خطأ، حاول مرة أخرى')
-      setLoading(false)
-      return
-    }
-    router.push(`/thank-you?name=${encodeURIComponent(name)}`)
+  e.preventDefault()
+  
+  // شرط حماية لإرضاء TypeScript
+  if (!supabase) {
+    alert('حدث خطأ في الاتصال بقاعدة البيانات')
+    return
   }
 
+  setLoading(true)
+  const { error } = await supabase.from('memories').insert([{ name: name || 'ضيف مجهول', message }])
+  if (error) {
+    alert('حدث خطأ، حاول مرة أخرى')
+    setLoading(false)
+    return
+  }
+  router.push(`/thank-you?name=${encodeURIComponent(name)}`)
+}
   return (
     <>
       <style>{`
@@ -483,7 +489,7 @@ export default function Home() {
         </motion.div>
          <div className="fixed bottom-4 left-0 right-0 text-center">
           <p className={`text-sm text-gray-500 opacity-70`}>
-            Made with 🤍 by <a href="https://cv-kappa-khaki-64.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+            Made with 🤍 by <a href="https://mostafa-s-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
               Mostafa Bahaa
             </a>
           </p>
