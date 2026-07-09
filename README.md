@@ -302,4 +302,4 @@ MIT License - Feel free to customize for your wedding!
 
 ---
 
-**Made with ❤️ for Mohamed & Nada's Wedding - 6/4/2026**
+**Made with ❤️ for Mahmoud & Yasmeen's Wedding - 6/4/2026**

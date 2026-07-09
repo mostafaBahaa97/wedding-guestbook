@@ -430,7 +430,7 @@ export default function Home() {
             <div className="photo-ring-outer" />
             <div className="photo-ring-inner" />
             <div className="photo-circle photo-float">
-              <img src="/couple2.png" alt="Mohamed & Nada" />
+              <img src="/couple2.png" alt="Mahmoud & Yasmeen" />
             </div>
           </motion.div>
 

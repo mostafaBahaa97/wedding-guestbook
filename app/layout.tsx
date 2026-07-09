@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohamed's Wedding | 6/4/2026",
-  description: "Join us in celebrating love and commitment. Share your blessings and memories with Mohamed & Nada",
+  title: "Mahmoud & Yasmeen's Wedding | 6/4/2026",
+  description: "Join us in celebrating love and commitment. Share your blessings and memories with Mahmoud & Yasmeen",
   icons: {
     icon: "/couple2.png",
   },

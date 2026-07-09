@@ -404,4 +404,4 @@ Before launching to guests:
 
 **Happy Deploying! 🚀**
 
-Made with ❤️ for Mohamed & Nada's Wedding
+Made with ❤️ for Mahmoud & Yasmeen's Wedding
