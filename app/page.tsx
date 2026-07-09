@@ -414,7 +414,7 @@ export default function Home() {
             >
               <span className="date-pill" style={{ fontSize: '1.75rem' }}>
                 <span style={{ color: 'var(--rose)', fontSize: '1rem' }}>✦</span>
-                6 . 4 . 2026
+                10 . 7 . 2026
                 <span style={{ color: 'var(--rose)', fontSize: '1rem' }}>✦</span>
               </span>
             </motion.div>
@@ -441,7 +441,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
-              <label className="field-label">الاسم (اختياري)</label>
+              <label className="field-label">الاسم </label>
               <input
                 type="text"
                 className="field-input"
