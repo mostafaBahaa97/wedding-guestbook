@@ -403,7 +403,7 @@ export default function Home() {
               transition={{ delay: 0.35 }}
             >
               <p className="names-arabic" style={{ fontSize: '2.75rem' }}>
-                محمد <span className='names-heading' style={{ color: 'var(--gold)', fontWeight: 300 }}>&</span> ندى
+                محمود <span className='names-heading' style={{ color: 'var(--gold)', fontWeight: 300 }}>&</span> ياسمين
               </p>
             </motion.h1>
 

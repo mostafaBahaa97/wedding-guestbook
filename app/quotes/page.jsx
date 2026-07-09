@@ -1,4 +1,4 @@
-import { supabase } from '../../utils/supabase'
+import { getSupabaseClient } from '../../utils/supabase'
 import QuotesGuestView from './quotes-guest-view'
 import AdminMemories from './admin-memories'
 
@@ -20,8 +20,29 @@ export default async function Quotes({ searchParams }) {
   }
 
   // لو أدمن، ابدأ استدعاء البيانات من سوبابيز
+  const client = getSupabaseClient()
+
+  if (!client) {
+    return (
+      <div className="min-h-screen flex items-center justify-center dir-rtl bg-[#faf6f0]">
+        <div style={{
+          backgroundColor: '#faf6f0',
+          padding: '2rem',
+          borderRadius: '2px',
+          color: '#a06b69',
+          border: '1px solid rgba(160, 107, 105, 0.25)',
+          fontFamily: "'Noto Naskh Arabic', serif",
+          maxWidth: '400px',
+          textAlign: 'center'
+        }}>
+          تم تعطيل الوصول إلى الرسائل مؤقتًا لأن إعدادات Supabase غير متوفرة.
+        </div>
+      </div>
+    )
+  }
+
   try {
-    const { data: memories, error } = await supabase
+    const { data: memories, error } = await client
       .from('memories')
       .select('*')
       .order('created_at', { ascending: false });
