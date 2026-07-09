@@ -277,7 +277,7 @@ export default function ThankYou() {
               fontWeight: '600',
               letterSpacing: '0.05em'
             }}>
-              محمد & ندى 💕
+              محمود & ياسمين 💕
             </p>
           </motion.div>
 
